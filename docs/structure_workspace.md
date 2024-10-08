@@ -1,5 +1,6 @@
 # Structure Workspace
 
+```
 vibe_x-master (workspace)
 ├── libs/
 │   ├── lib-auth/
@@ -78,7 +79,7 @@ vibe_x-master (workspace)
 │   │   ├── Cargo.toml
 ├── Cargo.toml (workspace)
 ├── .gitignore
-
+```
 
 ## Added structure with its characters.
 
