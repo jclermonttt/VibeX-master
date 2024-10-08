@@ -1,0 +1,57 @@
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+resolver = "2"
+members = [
+    # --- Services --- #
+    "services/service-auth",
+    "services/service-user",
+    # --- Migration --- #
+    "libs/lib-auth/migration",
+    "libs/lib-user/migration",
+    # --- Libs --- #
+    "libs/lib-auth",
+    "libs/lib-user",
+    # --- System --- #
+    "system",
+]
+
+[workspace.dependencies]
+tokio = { version = "1.40.0", features = ["full"] }
+
+tracing = "0.1.40"
+tracing-subscriber = "0.3.18"
+
+anyhow = "1.0.89"
+
+axum = { version = "0.7.7", features = ["macros"] }
+axum-extra = { version = "0.9.4", features = ["typed-routing", "typed-header"] }
+
+serde = { version = "1.0.210", features = ["derive"] }
+serde_json = "1.0.128"
+serde_with = "3.11.0"
+
+derive_more = { version = "1.0.0", features = ["full"] }
+
+# 🐚 An async & dynamic ORM for Rust
+sea-orm = { version = "1.0.1", features = [
+    "sqlx-postgres",
+    "runtime-tokio-rustls",
+    "macros",
+    "with-uuid",
+    "mock",
+    "debug-print",
+] }
+
+chrono = { version = "0.4.38", features = ["serde"] }
+validator = { version = "0.18.1", features = ["derive"] }
+
+# To share among other crates
+# Libs...
+lib_auth = { version = "0.1.0", path = "libs/lib-auth" }
+lib_user = { version = "0.1.0", path = "libs/lib-user" }
+# Services...
+service_auth = { version = "0.1.0", path = "services/service-auth" }
+service_user = { version = "0.1.0", path = "services/service-user" }

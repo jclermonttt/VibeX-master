@@ -1,0 +1,17 @@
+{
+  "binaries": [
+    {
+      "name": "migration_auth",
+      "src_path": "/home/hellbup/vibe_x-master/services/service-auth/migration/src/main.rs",
+      "required_features": []
+    },
+    {
+      "name": "system",
+      "src_path": "/home/hellbup/vibe_x-master/system/src/main.rs",
+      "required_features": []
+    }
+  ],
+  "examples": [],
+  "integration_tests": [],
+  "unit_tests": []
+}

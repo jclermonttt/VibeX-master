@@ -1,0 +1,13 @@
+{
+  "binaries": [],
+  "examples": [],
+  "integration_tests": [],
+  "unit_tests": [
+    {
+      "package_name": "lib_auth",
+      "test_cases": [
+        "tests::it_works"
+      ]
+    }
+  ]
+}

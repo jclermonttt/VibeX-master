@@ -1,0 +1,10 @@
+[package]
+name = "lib-user"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+
+
+# Add for access to the migration
+migration_user = { path = "migration" }
