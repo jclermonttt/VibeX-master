@@ -1,83 +1,84 @@
 # Structure Workspace
 
 vibe_x-master (workspace)
-  ├── libs/
-  │   ├── lib-auth/
-  │   │   ├── docs/
-  │   │   │   ├── api.md
-  │   │   │   ├── architecture.md
-  │   │   │   ├── deployment.md
-  │   │   ├── migration/
-  │   │   │   ├── src/
-  │   │   │   │   ├── lib.rs
-  │   │   │   │   ├── add_user.rs
-  │   │   │   │   ├── main.rs
-  │   │   │   ├── Cargo.toml
-  │   │   │   ├── README.md
-  │   │   ├── src/
-  │   │   │   ├── api/
-  │   │   │   │   ├── handlers/
-  │   │   │   │   │   ├── mod.rs
-  │   │   │   │   ├── router/
-  │   │   │   │   │   ├── mod.rs
-  │   │   │   │   ├── errors.rs
-  │   │   │   │   ├── mod.rs
-  │   │   │   ├── config/
-  │   │   │   │   ├── mod.rs
-  │   │   │   │   ├── db.rs
-  │   │   │   ├── models/
-  │   │   │   │   ├── mod.rs
-  │   │   │   │   ├── user.rs
-  │   │   │   ├── repositories/
-  │   │   │   │   ├── mod.rs
-  │   │   │   ├── utils/
-  │   │   │   │   ├── mod.rs
-  │   │   │   ├── errors.rs
-  │   │   │   ├── lib.rs
-  │   │   ├── tests/
-  │   │   │   ├── integration_test.rs
-  │   │   │   ├── unit_test.rs
-  │   │   ├── .env
-  │   │   ├── Cargo.toml
-  │   ├── lib-user/
-  │   │   ├── docs/
-  │   │   │   ├── api.md
-  │   │   │   ├── architecture.md
-  │   │   │   ├── deployment.md
-  │   │   ├── migration/
-  │   │   │   ├── src/
-  │   │   │   │   ├── lib.rs
-  │   │   │   │   ├── add_user.rs
-  │   │   │   │   ├── main.rs
-  │   │   │   ├── Cargo.toml
-  │   │   │   ├── README.md
-  │   │   ├── src/
-  │   │   │   ├── api/
-  │   │   │   │   ├── handlers/
-  │   │   │   │   │   ├── mod.rs
-  │   │   │   │   ├── router/
-  │   │   │   │   │   ├── mod.rs
-  │   │   │   │   ├── errors.rs
-  │   │   │   │   ├── mod.rs
-  │   │   │   ├── config/
-  │   │   │   │   ├── mod.rs
-  │   │   │   │   ├── db.rs
-  │   │   │   ├── models/
-  │   │   │   │   ├── mod.rs
-  │   │   │   │   ├── user.rs
-  │   │   │   ├── repositories/
-  │   │   │   │   ├── mod.rs
-  │   │   │   ├── utils/
-  │   │   │   │   ├── mod.rs
-  │   │   │   ├── errors.rs
-  │   │   │   ├── lib.rs
-  │   │   ├── tests/
-  │   │   │   ├── integration_test.rs
-  │   │   │   ├── unit_test.rs
-  │   │   ├── .env
-  │   │   ├── Cargo.toml
-  ├── Cargo.toml (workspace)
-  ├── .gitignore
+├── libs/
+│   ├── lib-auth/
+│   │   ├── docs/
+│   │   │   ├── api.md
+│   │   │   ├── architecture.md
+│   │   │   ├── deployment.md
+│   │   ├── migration/
+│   │   │   ├── src/
+│   │   │   │   ├── lib.rs
+│   │   │   │   ├── add_user.rs
+│   │   │   │   ├── main.rs
+│   │   │   ├── Cargo.toml
+│   │   │   ├── README.md
+│   │   ├── src/
+│   │   │   ├── api/
+│   │   │   │   ├── handlers/
+│   │   │   │   │   ├── mod.rs
+│   │   │   │   ├── router/
+│   │   │   │   │   ├── mod.rs
+│   │   │   │   ├── errors.rs
+│   │   │   │   ├── mod.rs
+│   │   │   ├── config/
+│   │   │   │   ├── mod.rs
+│   │   │   │   ├── db.rs
+│   │   │   ├── models/
+│   │   │   │   ├── mod.rs
+│   │   │   │   ├── user.rs
+│   │   │   ├── repositories/
+│   │   │   │   ├── mod.rs
+│   │   │   ├── utils/
+│   │   │   │   ├── mod.rs
+│   │   │   ├── errors.rs
+│   │   │   ├── lib.rs
+│   │   ├── tests/
+│   │   │   ├── integration_test.rs
+│   │   │   ├── unit_test.rs
+│   │   ├── .env
+│   │   ├── Cargo.toml
+│   ├── lib-user/
+│   │   ├── docs/
+│   │   │   ├── api.md
+│   │   │   ├── architecture.md
+│   │   │   ├── deployment.md
+│   │   ├── migration/
+│   │   │   ├── src/
+│   │   │   │   ├── lib.rs
+│   │   │   │   ├── add_user.rs
+│   │   │   │   ├── main.rs
+│   │   │   ├── Cargo.toml
+│   │   │   ├── README.md
+│   │   ├── src/
+│   │   │   ├── api/
+│   │   │   │   ├── handlers/
+│   │   │   │   │   ├── mod.rs
+│   │   │   │   ├── router/
+│   │   │   │   │   ├── mod.rs
+│   │   │   │   ├── errors.rs
+│   │   │   │   ├── mod.rs
+│   │   │   ├── config/
+│   │   │   │   ├── mod.rs
+│   │   │   │   ├── db.rs
+│   │   │   ├── models/
+│   │   │   │   ├── mod.rs
+│   │   │   │   ├── user.rs
+│   │   │   ├── repositories/
+│   │   │   │   ├── mod.rs
+│   │   │   ├── utils/
+│   │   │   │   ├── mod.rs
+│   │   │   ├── errors.rs
+│   │   │   ├── lib.rs
+│   │   ├── tests/
+│   │   │   ├── integration_test.rs
+│   │   │   ├── unit_test.rs
+│   │   ├── .env
+│   │   ├── Cargo.toml
+├── Cargo.toml (workspace)
+├── .gitignore
+
 
 ## Added structure with its characters.
 
