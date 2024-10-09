@@ -1,6 +1,6 @@
 pub use sea_orm_migration::prelude::*;
 
-mod m20241008_203354_add_users_table;
+pub mod m20241008_203354_add_users_table;
 
 pub struct Migrator;
 

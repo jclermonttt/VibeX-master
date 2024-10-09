@@ -55,3 +55,6 @@ lib_user = { version = "0.1.0", path = "libs/lib-user" }
 # Services...
 service_auth = { version = "0.1.0", path = "services/service-auth" }
 service_user = { version = "0.1.0", path = "services/service-user" }
+# Migration
+migration_auth = { version = "0.1.0", path = "libs/lib-auth/migration" }
+migration_user = { version = "0.1.0", path = "libs/lib-user/migration" }

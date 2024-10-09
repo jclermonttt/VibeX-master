@@ -1,3 +1,5 @@
+use migration_auth::m20241008_203354_add_users_table::User;
+use sea_orm::sqlx::types::chrono;
 use sea_orm_migration::{prelude::*, schema::*};
 
 #[derive(DeriveMigrationName)]
@@ -11,11 +13,29 @@ impl MigrationTrait for Migration {
         manager
             .create_table(
                 Table::create()
-                    .table(Post::Table)
+                    .table(Profile::Table)
                     .if_not_exists()
-                    .col(pk_auto(Post::Id))
-                    .col(string(Post::Title))
-                    .col(string(Post::Text))
+                    .col(pk_auto(Profile::Id))
+                    .col(integer(Profile::UserId).not_null())
+                    .col(string(Profile::Username).not_null().unique_key())
+                    .col(string(Profile::ProfilePicture))
+                    .col(string(Profile::Bio))
+                    .col(
+                        timestamp(Profile::CreatedAt)
+                            .not_null()
+                            .default(chrono::Utc::now()),
+                    )
+                    .col(
+                        timestamp(Profile::UpdatedAt)
+                            .not_null()
+                            .default(chrono::Utc::now()),
+                    )
+                    .foreign_key(
+                        ForeignKey::create()
+                            .from(Profile::Table, Profile::UserId)
+                            .to(User::Table, User::Id)
+                            .on_delete(ForeignKeyAction::Cascade),
+                    )
                     .to_owned(),
             )
             .await
@@ -25,15 +45,19 @@ impl MigrationTrait for Migration {
         // Replace the sample below with your own migration scripts
 
         manager
-            .drop_table(Table::drop().table(Post::Table).to_owned())
+            .drop_table(Table::drop().table(Profile::Table).to_owned())
             .await
     }
 }
 
 #[derive(DeriveIden)]
-enum Post {
+enum Profile {
     Table,
     Id,
-    Title,
-    Text,
+    UserId,
+    Username,
+    ProfilePicture,
+    Bio,
+    CreatedAt,
+    UpdatedAt,
 }
