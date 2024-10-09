@@ -17,8 +17,8 @@ impl MigrationTrait for Migration {
                     .col(string_uniq(User::Username))
                     .col(string_uniq(User::Email).not_null())
                     .col(string(User::PasswordHash).not_null())
-                    .col(string(User::Firstname).not_null())
-                    .col(string(User::Lastname).not_null())
+                    .col(string(User::FirstName).not_null())
+                    .col(string(User::LastName).not_null())
                     .col(boolean(User::IsActive).default(true))
                     .col(timestamp(User::CreatedAt).not_null())
                     .col(timestamp(User::UpdatedAt).not_null())
@@ -48,11 +48,11 @@ enum User {
     Email,
     EmailVerificationToken,
     EmailVerifiedAt,
-    Firstname,
+    FirstName,
     Id,
     IsActive,
     LastLoginAt,
-    Lastname,
+    LastName,
     PasswordHash,
     PasswordResetExpiresAt,
     PasswordResetToken,
