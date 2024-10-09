@@ -4,7 +4,7 @@
   "integration_tests": [],
   "unit_tests": [
     {
-      "package_name": "lib_auth",
+      "package_name": "service-account",
       "test_cases": [
         "tests::it_works"
       ]
