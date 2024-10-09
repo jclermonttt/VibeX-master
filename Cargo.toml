@@ -48,11 +48,8 @@ validator = { version = "0.18.1", features = ["derive"] }
 
 # To share among other crates
 # Libs...
-lib_auth = { version = "0.1.0", path = "libs/lib-auth" }
-lib_user = { version = "0.1.0", path = "libs/lib-user" }
+lib_account = { version = "0.1.0", path = "libs/lib-account" }
 # Services...
-service_auth = { version = "0.1.0", path = "services/service-auth" }
-service_user = { version = "0.1.0", path = "services/service-user" }
+service_account = { version = "0.1.0", path = "services/service-account" }
 # Migration
-migration_auth = { version = "0.1.0", path = "libs/lib-auth/migration" }
-migration_user = { version = "0.1.0", path = "libs/lib-user/migration" }
+migration_account = { version = "0.1.0", path = "libs/lib-account/migration" }
