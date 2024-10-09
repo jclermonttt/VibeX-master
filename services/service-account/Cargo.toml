@@ -1,0 +1,6 @@
+[package]
+name = "service-account"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]

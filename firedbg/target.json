@@ -2,7 +2,32 @@
   "binaries": [
     {
       "name": "migration_auth",
-      "src_path": "/home/hellbup/vibe_x-master/services/service-auth/migration/src/main.rs",
+      "src_path": "/home/hellbup/vibe_x-master/libs/lib-auth/migration/src/main.rs",
+      "required_features": []
+    },
+    {
+      "name": "migration_user",
+      "src_path": "/home/hellbup/vibe_x-master/libs/lib-user/migration/src/main.rs",
+      "required_features": []
+    },
+    {
+      "name": "service-auth-client",
+      "src_path": "/home/hellbup/vibe_x-master/services/service-auth/./src/client.rs",
+      "required_features": []
+    },
+    {
+      "name": "service-auth-server",
+      "src_path": "/home/hellbup/vibe_x-master/services/service-auth/./src/server.rs",
+      "required_features": []
+    },
+    {
+      "name": "service-user-client",
+      "src_path": "/home/hellbup/vibe_x-master/services/service-user/./src/client.rs",
+      "required_features": []
+    },
+    {
+      "name": "service-user-server",
+      "src_path": "/home/hellbup/vibe_x-master/services/service-user/./src/server.rs",
       "required_features": []
     },
     {

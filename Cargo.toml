@@ -6,16 +6,13 @@ edition = "2021"
 resolver = "2"
 members = [
     # --- Services --- #
-    "services/service-auth",
-    "services/service-user",
+    "services/service-account", 
     # --- Migration --- #
-    "libs/lib-auth/migration",
-    "libs/lib-user/migration",
+    "libs/lib-account/migration",
     # --- Libs --- #
-    "libs/lib-auth",
-    "libs/lib-user",
+    "libs/lib-account",
     # --- System --- #
-    "system",
+    "system", 
 ]
 
 [workspace.dependencies]
@@ -41,6 +38,7 @@ sea-orm = { version = "1.0.1", features = [
     "runtime-tokio-rustls",
     "macros",
     "with-uuid",
+    "with-chrono",
     "mock",
     "debug-print",
 ] }
