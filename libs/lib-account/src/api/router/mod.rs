@@ -7,6 +7,6 @@ use axum::{routing::post, Extension, Router};
 
 pub async fn create_router() -> Router {
     Router::new()
-        .route("/api/auth/signup", post())
+      //  .route("/api/auth/signup", post())
         .with_state(ApiState)
 }

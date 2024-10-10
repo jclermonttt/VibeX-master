@@ -6,7 +6,7 @@ use serde::Deserialize;
 use validator::Validate;
 
 #[derive(Deserialize, Validate)]
-pub struct SignUpInput {
+pub struct SignUpPayload {
     #[validate(length(min = 1))]
     pub first_name: String,
     #[validate(length(min = 1))]
@@ -20,7 +20,7 @@ pub struct SignUpInput {
 }
 
 #[derive(Deserialize, Validate)]
-pub struct SignInInput {
+pub struct SignInPayload {
     #[validate(length(min = 3))]
     pub username: Option<String>,
     #[validate(email)]
