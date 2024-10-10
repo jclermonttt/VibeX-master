@@ -19,9 +19,12 @@ pub struct SignUpInput {
     pub password: String,
 }
 
-#[derive(Deserialize)]
+#[derive(Deserialize, Validate)]
 pub struct SignInInput {
+    #[validate(length(min = 3))]
     pub username: Option<String>,
+    #[validate(email)]
     pub email: Option<String>,
+    #[validate(length(min = 8))]
     pub password: String,
 }

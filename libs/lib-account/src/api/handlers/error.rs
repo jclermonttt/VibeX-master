@@ -24,7 +24,6 @@ impl IntoResponse for Error {
     fn into_response(self) -> axum::response::Response {
         let (status, body) = match self {
             Error::RepoErr(err) => (StatusCode::INTERNAL_SERVER_ERROR, format!("Repository error: {}", err)),
-            Error::SeaErr(err) => (StatusCode::INTERNAL_SERVER_ERROR, format!("Database error: {}", err)),
         };
 
         let body = serde_json::json!({ "error": body });
