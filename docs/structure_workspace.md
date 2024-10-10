@@ -3,7 +3,7 @@
 ```
 vibe_x-master (workspace)
 ├── libs/
-│   ├── lib-auth/
+│   ├── lib-account/
 │   │   ├── docs/
 │   │   │   ├── api.md
 │   │   │   ├── architecture.md
@@ -21,61 +21,37 @@ vibe_x-master (workspace)
 │   │   │   │   │   ├── mod.rs
 │   │   │   │   ├── router/
 │   │   │   │   │   ├── mod.rs
-│   │   │   │   ├── errors.rs
 │   │   │   │   ├── mod.rs
 │   │   │   ├── config/
 │   │   │   │   ├── mod.rs
-│   │   │   │   ├── db.rs
 │   │   │   ├── models/
+│   │   │   │   ├── inputs.rs
+│   │   │   │   ├── response.rs
 │   │   │   │   ├── mod.rs
+│   │   │   │   ├── profile.rs
 │   │   │   │   ├── user.rs
 │   │   │   ├── repositories/
+│   │   │   │   ├── error.rs
 │   │   │   │   ├── mod.rs
+│   │   │   │   ├── service.rs
+│   │   │   │   ├── mutation.rs
+│   │   │   │   ├── query.rs
 │   │   │   ├── utils/
 │   │   │   │   ├── mod.rs
-│   │   │   ├── errors.rs
+│   │   │   ├── error.rs
 │   │   │   ├── lib.rs
 │   │   ├── tests/
 │   │   │   ├── integration_test.rs
 │   │   │   ├── unit_test.rs
 │   │   ├── .env
 │   │   ├── Cargo.toml
-│   ├── lib-user/
-│   │   ├── docs/
-│   │   │   ├── api.md
-│   │   │   ├── architecture.md
-│   │   │   ├── deployment.md
-│   │   ├── migration/
-│   │   │   ├── src/
-│   │   │   │   ├── lib.rs
-│   │   │   │   ├── add_user.rs
-│   │   │   │   ├── main.rs
-│   │   │   ├── Cargo.toml
-│   │   │   ├── README.md
+│   ├── lib-utils/
 │   │   ├── src/
-│   │   │   ├── api/
-│   │   │   │   ├── handlers/
-│   │   │   │   │   ├── mod.rs
-│   │   │   │   ├── router/
-│   │   │   │   │   ├── mod.rs
-│   │   │   │   ├── errors.rs
-│   │   │   │   ├── mod.rs
-│   │   │   ├── config/
-│   │   │   │   ├── mod.rs
-│   │   │   │   ├── db.rs
-│   │   │   ├── models/
-│   │   │   │   ├── mod.rs
-│   │   │   │   ├── user.rs
-│   │   │   ├── repositories/
-│   │   │   │   ├── mod.rs
 │   │   │   ├── utils/
+│   │   │   │   ├── b64.rs
+│   │   │   │   ├── envs.rs
 │   │   │   │   ├── mod.rs
-│   │   │   ├── errors.rs
 │   │   │   ├── lib.rs
-│   │   ├── tests/
-│   │   │   ├── integration_test.rs
-│   │   │   ├── unit_test.rs
-│   │   ├── .env
 │   │   ├── Cargo.toml
 ├── Cargo.toml (workspace)
 ├── .gitignore

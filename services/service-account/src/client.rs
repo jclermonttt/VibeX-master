@@ -1,14 +1,13 @@
 use anyhow::Result;
 
-
 pub async fn run() -> Result<()> {
     // Your client logic here.
     Ok(())
 }
 
-/// Main entry point of the `Service-auth` client.
+/// Main entry point of the `Service-Account` client.
 ///
-/// This function is the main entry point and is responsible for calling the `run` function for the Service-auth client.
+/// This function is the main entry point and is responsible for calling the `run` function for the Service-Account client.
 /// It uses the `tokio::main` attribute to run the client asynchronously.
 ///
 /// # Returns

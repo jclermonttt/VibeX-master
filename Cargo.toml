@@ -6,13 +6,14 @@ edition = "2021"
 resolver = "2"
 members = [
     # --- Services --- #
-    "services/service-account", 
+    "services/service-account",
     # --- Migration --- #
     "libs/lib-account/migration",
     # --- Libs --- #
     "libs/lib-account",
     # --- System --- #
-    "system", 
+    "system",
+    "libs/lib-utils",
 ]
 
 [workspace.dependencies]
@@ -45,10 +46,18 @@ sea-orm = { version = "1.0.1", features = [
 
 chrono = { version = "0.4.38", features = ["serde"] }
 validator = { version = "0.18.1", features = ["derive"] }
+uuid = { version = "1.10.0", features = [
+    "v4",
+    "fast-rng",
+    "macro-diagnostics",
+    "serde",
+] }
+
 
 # To share among other crates
 # Libs...
 lib_account = { version = "0.1.0", path = "libs/lib-account" }
+lib_utils = { version = "0.1.0", path = "libs/lib-utils" }
 # Services...
 service_account = { version = "0.1.0", path = "services/service-account" }
 # Migration

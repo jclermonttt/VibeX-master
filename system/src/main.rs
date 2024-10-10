@@ -7,10 +7,8 @@ async fn main() -> Result<()> {
     tracing_subscriber::fmt::init();
 
     let services = vec![
-        ("services/service-auth", "service-auth-server"),
-        ("services/service-auth", "service-auth-client"),
-        ("services/service-user", "service-user-server"),
-        ("services/service-user", "service-user-client"),
+        ("services/service-account", "service-account-server"),
+        ("services/service-account", "service-account-client"),
     ];
 
     for (service, binary) in &services {

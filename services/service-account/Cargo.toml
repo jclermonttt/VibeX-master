@@ -4,3 +4,13 @@ version.workspace = true
 edition.workspace = true
 
 [dependencies]
+tokio = { workspace = true }
+anyhow = { workspace = true }
+
+[[bin]]
+name = "service-account-server"
+path = "./src/server.rs"
+
+[[bin]]
+name = "service-account-client"
+path = "./src/client.rs"
