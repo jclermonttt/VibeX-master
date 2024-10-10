@@ -9,9 +9,9 @@ pub fn get_env_parse<T: FromStr>(name: &'static str) -> Result<T> {
     val.parse::<T>().map_err(|_| Error::WrongFormat(name))
 }
 
-pub fn get_env_b64u_as_u8s(name: &'static str) -> Result<Vec<u8>> {
+//pub fn get_env_b64u_as_u8s(name: &'static str) -> Result<Vec<u8>> {
     
-}
+//}
 
 pub type Result<T> = core::result::Result<T, Error>;
 

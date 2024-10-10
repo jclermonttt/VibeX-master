@@ -4,10 +4,6 @@
 vibe_x-master (workspace)
 ├── libs/
 │   ├── lib-account/
-│   │   ├── docs/
-│   │   │   ├── api.md
-│   │   │   ├── architecture.md
-│   │   │   ├── deployment.md
 │   │   ├── migration/
 │   │   │   ├── src/
 │   │   │   │   ├── lib.rs
@@ -16,29 +12,16 @@ vibe_x-master (workspace)
 │   │   │   ├── Cargo.toml
 │   │   │   ├── README.md
 │   │   ├── src/
-│   │   │   ├── api/
-│   │   │   │   ├── handlers/
+│   │   │   ├── repository/
+│   │   │   │   ├── mutations/
 │   │   │   │   │   ├── mod.rs
-│   │   │   │   ├── router/
+│   │   │   │   │   ├── user.rs
+│   │   │   │   ├── queries/
 │   │   │   │   │   ├── mod.rs
+│   │   │   │   │   ├── user.rs
 │   │   │   │   ├── mod.rs
-│   │   │   ├── config/
-│   │   │   │   ├── mod.rs
-│   │   │   ├── models/
-│   │   │   │   ├── inputs.rs
-│   │   │   │   ├── response.rs
-│   │   │   │   ├── mod.rs
-│   │   │   │   ├── profile.rs
-│   │   │   │   ├── user.rs
-│   │   │   ├── repositories/
 │   │   │   │   ├── error.rs
-│   │   │   │   ├── mod.rs
-│   │   │   │   ├── service.rs
-│   │   │   │   ├── mutation.rs
-│   │   │   │   ├── query.rs
-│   │   │   ├── utils/
-│   │   │   │   ├── mod.rs
-│   │   │   ├── error.rs
+│   │   │   │   ├── user_repo.rs
 │   │   │   ├── lib.rs
 │   │   ├── tests/
 │   │   │   ├── integration_test.rs

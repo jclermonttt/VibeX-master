@@ -1,9 +1,7 @@
-pub mod mutation;
-pub mod query;
 pub mod error;
-pub mod service;
+pub mod mutations;
+pub mod queries;
+mod user_repo;
 
-pub use mutation::*;
-pub use query::*;
-
-pub use sea_orm::*;
+pub use self::error::{Error, Result};
+pub use user_repo::UserRepo;

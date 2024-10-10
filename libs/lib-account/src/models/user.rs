@@ -7,7 +7,6 @@ use serde::{Deserialize, Serialize};
 #[sea_orm(table_name = "user")]
 pub struct Model {
     #[sea_orm(primary_key, auto_increment = false)]
-    #[serde(skip_deserializing)]
     pub id: Uuid,
     pub first_name: String,
     pub last_name: String,
@@ -15,24 +14,14 @@ pub struct Model {
     pub username: String,
     #[sea_orm(unique)]
     pub email: String,
-
-    #[serde(skip_serializing, skip_deserializing)]
     pub email_verification_token: Option<String>,
-    #[serde(skip_serializing, skip_deserializing)]
     pub email_verified_at: Option<DateTime>,
-    #[serde(skip_serializing, skip_deserializing)]
     pub is_active: bool,
-    #[serde(skip_serializing, skip_deserializing)]
     pub last_login_at: DateTime,
-    #[serde(skip_deserializing)]
     pub password_hash: String,
-    #[serde(skip_serializing, skip_deserializing)]
     pub password_reset_expires_at: Option<DateTime>,
-    #[serde(skip_serializing, skip_deserializing)]
     pub password_reset_token: Option<String>,
-    #[serde(skip_deserializing, skip_serializing)]
     pub created_at: DateTime,
-    #[serde(skip_deserializing, skip_serializing)]
     pub updated_at: DateTime,
 }
 
