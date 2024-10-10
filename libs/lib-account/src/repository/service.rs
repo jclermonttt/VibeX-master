@@ -2,7 +2,7 @@ use super::{
     error::{Error, Result},
     Mutation, Query,
 };
-use crate::models::{SignUpInput, UserActiveModel};
+use crate::models::{SignUpPayload, UserActiveModel};
 use sea_orm::DatabaseTransaction;
 
 #[derive(Clone)]
@@ -12,12 +12,12 @@ impl AuthRepoService {
     pub async fn create_user(
         &self,
         txn: &DatabaseTransaction,
-        input: SignUpInput,
+        payload: SignUpPayload,
     ) -> Result<UserActiveModel> {
-        Query::check_email_use(txn, &input.email).await?;
+        Query::check_email_use(txn, &payload.email).await?;
 
-        Query::check_username_use(txn, &input.username).await?;
+        Query::check_username_use(txn, &payload.username).await?;
 
-        Mutation::insert_user(txn, &input).await
+        Mutation::insert_user(txn, &payload).await
     }
 }
